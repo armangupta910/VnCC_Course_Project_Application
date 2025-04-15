@@ -1,77 +1,64 @@
+<h1>Note-Taking Microservices</h1>
 
-```markdown
-# Note-Taking Microservices
+<p>This repository contains microservices for a note-taking application. Each microservice (add, delete, get, update) is containerized with Docker.</p>
 
-This repository contains microservices for a note-taking application. Each microservice (add, delete, get, update) is containerized with Docker.
+<h2>Prerequisites</h2>
+<ul>
+  <li><a href="https://www.docker.com/get-started">Docker</a> installed</li>
+  <li><a href="https://hub.docker.com/">Docker Hub</a> account</li>
+  <li>Log in to Docker:
+    <pre><code>docker login</code></pre>
+  </li>
+</ul>
 
-## Prerequisites
+<h2>Microservices</h2>
+<p>Each microservice has its own folder. Follow the steps below for each one.</p>
 
-- [Docker](https://www.docker.com/get-started) installed
-- A [Docker Hub](https://hub.docker.com/) account
-- Logged into Docker on your terminal using:
+<hr />
 
-```bash
-docker login
-```
-
-## Microservices
-
-Each microservice has its own folder. Follow the steps below for each one.
-
----
-
-### 1. **Add Note**
-
-```bash
-cd addNote
-docker build -t <your-docker-username>/add-note:latest .
-docker push <your-docker-username>/add-note:latest
+<h3>1. <strong>Add Note</strong></h3>
+<pre><code>cd addNote
+docker build -t &lt;your-docker-username&gt;/add-note:latest .
+docker push &lt;your-docker-username&gt;/add-note:latest
 cd ..
-```
+</code></pre>
 
----
+<hr />
 
-### 2. **Delete Note**
-
-```bash
-cd deleteNote
-docker build -t <your-docker-username>/delete-note:latest .
-docker push <your-docker-username>/delete-note:latest
+<h3>2. <strong>Delete Note</strong></h3>
+<pre><code>cd deleteNote
+docker build -t &lt;your-docker-username&gt;/delete-note:latest .
+docker push &lt;your-docker-username&gt;/delete-note:latest
 cd ..
-```
+</code></pre>
 
----
+<hr />
 
-### 3. **Get Note**
-
-```bash
-cd getNote
-docker build -t <your-docker-username>/get-note:latest .
-docker push <your-docker-username>/get-note:latest
+<h3>3. <strong>Get Note</strong></h3>
+<pre><code>cd getNote
+docker build -t &lt;your-docker-username&gt;/get-note:latest .
+docker push &lt;your-docker-username&gt;/get-note:latest
 cd ..
-```
+</code></pre>
 
----
+<hr />
 
-### 4. **Update Note**
-
-```bash
-cd updateNote
-docker build -t <your-docker-username>/update-note:latest .
-docker push <your-docker-username>/update-note:latest
+<h3>4. <strong>Update Note</strong></h3>
+<pre><code>cd updateNote
+docker build -t &lt;your-docker-username&gt;/update-note:latest .
+docker push &lt;your-docker-username&gt;/update-note:latest
 cd ..
-```
+</code></pre>
 
----
+<hr />
 
-## Notes
+<h2>Notes</h2>
+<ul>
+  <li>Ensure the <code>Dockerfile</code>, <code>requirements.txt</code>, and source code (<code>*.py</code>) are present in each service directory.</li>
+  <li>If using private Docker Hub repositories, ensure access permissions are configured correctly.</li>
+</ul>
 
-- Ensure the `Dockerfile`, `requirements.txt`, and source code (`*.py`) are present in each service directory.
-- If using private Docker Hub repositories, ensure access permissions are configured correctly.
+<hr />
 
----
-
-## License
-
-MIT
-```
+<h2>License</h2>
+<p>MIT</p>
